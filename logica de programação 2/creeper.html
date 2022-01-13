@@ -1,0 +1,42 @@
+<!--
+    O Johann é um menino de 11 anos e adora jogar Minecraft. Minecraft é aquele jogo onde você constrói um mundo com blocos, como se fosse um Lego virtual. Ele gosta tanto que pediu um pôster de uma das personagens principais do jogo: o Creeper.
+
+    O Creeper na verdade é um monstro (que explode ao se aproximar de um jogador) e tem mais ou menos essa cara:
+
+Retângulo 1: 350, 300 (cabeça).
+Retângulos 2 e 3: 90, 90 (olhos).
+Retângulo 4: 70, 100 (nariz).
+Retângulos 5 e 6: 40, 110 (parte da boca).
+cores: darkgreen e black.
+
+-->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas')
+    var pincel = tela.getContext('2d')
+
+    pincel.fillStyle = 'lightgrey' 
+    pincel.fillRect(0, 0, 600, 400) // tela
+
+    pincel.fillStyle = 'darkgreen'
+    pincel.fillRect(125, 50, 350, 300) // cabeça 175 87 42
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(176, 110, 90, 90) //olho direito
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(336, 110, 90, 90) //olho esquerdo 
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(266, 200, 70, 100) // nariz
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(230, 240, 40, 110) // boca lado direito
+
+    pincel.fillStyle = 'black'
+    pincel.fillRect(330, 240, 40, 110) // boca lado esquerdo
+
+</script>
+

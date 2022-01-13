@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        
+        document.write("<br>");
+
+    }
+    
+    function mostra(parametro) {
+
+        document.write(parametro);
+        pulaLinha();
+    }
+    
+    var ano = 2021
+
+    mostra("A idade do Flávio é: ");
+    mostra(ano - 1977);
+    
+
+    mostra("Flávio nasceu em: ");
+    mostra(2016 - 39)
+    
+
+    mostra("A média das idades é: ");
+    mostra(Math.round((50 + 30 + 20)/3))
+    
+    
+
+    mostra("Flávio nasceu em " + (2016 - 39));
+    
+    
+    ano = 2022
+    mostra("Flávio tem " + (2022 - 1977) + " anos")
+    
+
+    var nome = "Flávio"
+
+    mostra("A idade do " + nome + " é: " + (ano - 1977) + " anos <br>");
+
+    mostra("A idade do Flávio é 45 <br>A idade do Joaquin é 20<br>E a idade do Barney é 41<br>");
+    
+    var idadeFlavio = 45
+    var idadeJoaquin = 20
+    var idadeBarney = 41
+
+    var media = (idadeBarney + idadeFlavio + idadeJoaquin)/3;
+    mostra("A média das idades é: ");
+    mostra(Math.round(media))
+    
+
+    
+
+</script>

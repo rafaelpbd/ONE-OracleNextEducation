@@ -1,0 +1,48 @@
+<!--
+    Yan teve a ideia de criar um programa para criar receitas. Nele, há uma lista no qual o usuário pode adicionar ingredientes. Vamos observar:
+
+    Ao testar o código, verificamos que ele funciona! O problema é que podemos adicionar na lista de uma receita ingredientes repetidos. Altere o código para que os ingredientes repetidos não possam ser adicionados. 
+-->
+
+
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<script>
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade) {
+
+        var achou = false
+
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+
+            for(itens = 0; itens < quantidade; itens++ ) {
+
+                
+                if(ingrediente.toLowerCase() == ingredientes[itens]) {
+
+                    achou = true
+
+                }
+
+            }  
+            
+            
+            if(achou == false) {
+
+                ingredientes.push(ingrediente);
+
+                contador++; 
+
+            } 
+    }
+
+    console.log(ingredientes);
+    document.write(ingredientes)
+</script>
