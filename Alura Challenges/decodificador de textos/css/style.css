@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: url(/home/rafael/Documents/ONE-OracleNextEducation/Alura\ Challenges/decodificador\ de\ textos/img/decipher_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*
+body::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+*/
+
+#container {
+    position: relative;
+    top: 5em;
+    background-color: rgba(82, 83, 88, 0.5);
+    width: 800px;
+    height: 500px;
+    border: solid 2px gray;
+    border-radius: 2%;
+    box-shadow: 15px, 5px, 10px, blue;
+} 
+
+#caixa_decodificadora {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    line-height: 25px;
+    text-align: left;
+    padding: 1%;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 22px;
+    
+}
+#label_decodificadora {
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+#caixa_codificadora {
+    position: absolute;
+    top: 15%;
+    left: 52%;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    line-height: 25px;
+    text-align: left;
+    padding: 1.5%;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 22px;
+
+}
+#label_codificadora {
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 52%;
+}
+
+label {
+    font-size: 20px;
+}
+.button {
+    
+    background-color: rgba(211, 211, 211, 0.7);
+    font-size: 1em;
+    font-family: cursive;
+    border: solid 2px darkgray;
+    border-radius: 10px;
+}
+
+.button:hover {
+    
+    background-color: rgba(211, 211, 211, 0.9);
+}
+
+.button_codificar {
+    position: absolute;
+    left: 7%;
+    top: 58%;
+    width: 110px;
+    height: 30px;
+}
+
+.button_decodificar {
+    position: absolute;
+    left: 27%;
+    top: 58%;
+    width: 110px;
+    height: 30px;
+}
+
+.button_copiar {
+    position: absolute;
+    left: 55%;
+    top: 58%;
+    width: 110px;
+    height: 30px;
+}
