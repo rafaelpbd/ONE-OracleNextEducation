@@ -8,30 +8,41 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <link rel="javascript" href="javascript/script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Covered+By+Your+Grace&family=Overpass+Mono&display=swap" rel="stylesheet">
+    <script src="javascript/script.js"></script>
 
 </head>
 <body>
-    <div id="container">
-        <form action="/pagina-processa-dados-do-form">
+    <div id="container" class="box_shadow">
+        <form action="#">
             <div>
-                <label id="label_decodificadora" for="caixa_decodificadora">Texto Decodificado:</label>
-                <textarea id="caixa_decodificadora">Digite aqui o texto a ser codificado
+                <label id="label_decodificadora" for="caixa_decodificadora">Texto normal ou criptografado:</label>
+                <textarea id="caixa_decodificadora" class="box_shadow" onclick="selecionar()">Digite aqui o texto a ser criptografado ou descriptografado. Digite somente letras minusculas, sem caracteres especiais.
                 </textarea>
             </div>
             <div>
-                <label id="label_codificadora" for="caixa_codificadora">Texto Codificado:</label>
-                <textarea id="caixa_codificadora">
+                <label id="label_codificadora" for="caixa_codificadora">Texto convertido:</label>
+                <textarea id="caixa_codificadora" class="box_shadow" value="">
                 </textarea>
             </div>
-            <input for="caixa_decodificadora" class="button button_codificar "  type="button" value="Codificar">
-            <input for="caixa_decodificadora" class="button button_decodificar" type="button" value="Decodificar">
-            <input for="caixa_codificadora" class="button button_copiar" type="button" value="Copiar">
+            <input for="caixa_decodificadora" class="box_shadow button button_codificar" type="button" value="Criptografar" onclick="codificar()">
+            <input for="caixa_decodificadora" class="box_shadow button button_decodificar" type="button" value="Descriptografar" onclick="descriptografar()">   
        
         </form>
+        <button id="button_copiar" for="caixa_codificadora" class="box_shadow button button_copy" onclick="copia()">Copiar</button>
+    </div>
+    <div id="footer">
+        <p class="dev_name">Desenvolvido por Rafael Marques da Silva</p>
+        <div id="logos">
+            <a href="https://www.linkedin.com/in/rafael-marques-da-silva/" target="blank_"> <img src="img/logo_linkedin_64px.png" alt="logo e link para o linkedin do desenvolvedor"> </a>
+            <a href="https://github.com/rafaelpbd" target="blank_"> <img src="img/logo_github_50px.png" alt="logo e link para o github do desenvolvedor"> </a>
+        </div>
     </div>
 
 
+    <script src="javascript/script.js"></script>  
 </body>
 </html>
