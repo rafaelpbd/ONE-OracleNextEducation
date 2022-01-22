@@ -90,8 +90,8 @@ body::after
     padding: 1%;
     font-family: 'Courgette', cursive;
     font-size: 22px;
-    line
 }
+
 #label_decodificadora {
     color: white;
     position: absolute;
@@ -162,6 +162,6 @@ textarea {
 
 .button_copy {
     position: absolute;
-    left: 67%;
+    left: 65%;
     top: 88%;
 }

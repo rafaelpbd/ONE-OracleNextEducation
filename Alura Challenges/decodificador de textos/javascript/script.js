@@ -7,7 +7,7 @@ function copia() {
 
 }
 
-function caracteresEsperiais(caractere) {
+function caracteresEspeciais(caractere) {
     
     const caracteresEsp = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return caracteresEsp.test(caractere);
@@ -16,7 +16,7 @@ function caracteresEsperiais(caractere) {
 
 function caracteresComAcento(caractere) {
     
-    const caracteresAcento = /ãẽĩõũâêîôûáéíóú/;
+    const caracteresAcento = /ãẽĩõũâêîôûáéíóú/g;
     return caracteresAcento.test(caractere);
 
 }
@@ -42,7 +42,7 @@ function codificar() {
         var testeMinuscula = "";
         testeMinuscula = texto[i]; 
         
-        if (texto[i] == testeMinuscula.toLowerCase() && caracteresEsperiais(testeMinuscula) != true && caracteresComAcento(testeMinuscula) != true) {
+        if (texto[i] == testeMinuscula.toLowerCase() && caracteresEspeciais(testeMinuscula) != true && caracteresComAcento(testeMinuscula) != true) {
 
             novoTexto[i] = texto[i] 
 
@@ -55,6 +55,7 @@ function codificar() {
             break;
         }
         console.log(testeMinuscula);
+        console.log(caracteresComAcento(testeMinuscula));
     }
     
     
@@ -154,34 +155,3 @@ var textoCriptografado = ""
 var textoDescriptografado = ""
 
 
-
-/* 
-    document.getElementById("caixa_codificadora").value = textoCriptografado;
-    
-    
-    caixa_codificadora.value = textoCriptografado 
-    console.log(textoCriptografado);
-    console.log(textoDescriptografado);
-
-*/
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-var caixa_decodificadora = document.querySelector("#caixa_decodificadora");
-caixa_decodificadora.focus();
-*/

@@ -20,13 +20,11 @@
         <form action="#">
             <div>
                 <label id="label_decodificadora" for="caixa_decodificadora">Texto normal ou criptografado:</label>
-                <textarea id="caixa_decodificadora" class="box_shadow" onclick="selecionar()">Digite aqui o texto a ser criptografado ou descriptografado. Digite somente letras minusculas, sem caracteres especiais.
-                </textarea>
+                <textarea id="caixa_decodificadora" class="box_shadow" onclick="selecionar()">Digite aqui o texto a ser criptografado ou descriptografado. Digite somente letras minusculas, sem caracteres especiais.</textarea>
             </div>
             <div>
                 <label id="label_codificadora" for="caixa_codificadora">Texto convertido:</label>
-                <textarea id="caixa_codificadora" class="box_shadow" value="">
-                </textarea>
+                <textarea id="caixa_codificadora" class="box_shadow"></textarea>
             </div>
             <input for="caixa_decodificadora" class="box_shadow button button_codificar" type="button" value="Criptografar" onclick="codificar()">
             <input for="caixa_decodificadora" class="box_shadow button button_decodificar" type="button" value="Descriptografar" onclick="descriptografar()">   
