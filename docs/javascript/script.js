@@ -9,17 +9,11 @@ function copia() {
 
 function caracteresEspeciais(caractere) {
     
-    const caracteresEsp = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const caracteresEsp = /[`!@#$%^&*()1234567890áãẽĩõũâêîôûáéíóú_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return caracteresEsp.test(caractere);
 
 }
 
-function caracteresComAcento(caractere) {
-    
-    const caracteresAcento = /ãẽĩõũâêîôûáéíóú/g;
-    return caracteresAcento.test(caractere);
-
-}
 
 function selecionar() {
 
@@ -42,7 +36,7 @@ function codificar() {
         var testeMinuscula = "";
         testeMinuscula = texto[i]; 
         
-        if (texto[i] == testeMinuscula.toLowerCase() && caracteresEspeciais(testeMinuscula) != true && caracteresComAcento(testeMinuscula) != true) {
+        if (texto[i] == testeMinuscula.toLowerCase() && caracteresEspeciais(testeMinuscula) != true) {
 
             novoTexto[i] = texto[i] 
 
@@ -55,7 +49,6 @@ function codificar() {
             break;
         }
         console.log(testeMinuscula);
-        console.log(caracteresComAcento(testeMinuscula));
     }
     
     
