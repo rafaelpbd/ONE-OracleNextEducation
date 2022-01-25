@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function criaQuadrado(cor, x, y, width, lenght) {
+        
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, width, lenght);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, width, lenght);
+
+    }
+    
+    tela = document.querySelector('canvas')
+    pincel = tela.getContext('2d')
+
+
+    for(x = 0; x < 600; x += 50) {
+
+    criaQuadrado("blue", x, 0, 50, 50);
+    criaQuadrado("blue", x, 50, 50, 50);
+    criaQuadrado("blue", x, 100, 50, 50);
+    criaQuadrado("blue", x, 150, 50, 50);
+    criaQuadrado("blue", x, 200, 50, 50);
+    criaQuadrado("blue", x, 250, 50, 50);
+    criaQuadrado("blue", x, 300, 50, 50);
+    criaQuadrado("blue", x, 350, 50, 50);
+    }
+    
+
+</script>

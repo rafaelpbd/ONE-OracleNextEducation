@@ -1,0 +1,41 @@
+<!--
+Acabei de conversar com uma professora de matemática do ensino fundamental. Ela me disse que os alunos estão com dificuldades de aprender frações, por falta de exercícios. Para ensinar o conceito de uma fração, são utilizados desenhos parecidos com abaixo:
+
+Vamos ajudar a professora?
+
+Escreva uma função desenhaQuadrado, que recebe x, y, o tamanho e a cor. Cada quadrado desenhado deve utilizar um stroke.
+
+Baseado nessa função, tente reproduzir a imagem acima! Escreva o programa, depois disso clique em Continuar para ver a resposta do instrutor.
+-->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    tela = document.querySelector('canvas');
+    pincel = tela.getContext('2d');
+
+    function desenhaQuadrado(x, y, width, lenght, color) {
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, width, lenght);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, width, lenght)
+        
+    }
+
+    desenhaQuadrado(0, 0, 600, 400, 'lightgray');
+    
+    for(x = 25; x < 251; x += 75) {
+
+        desenhaQuadrado(x, 10, 75, 75, 'darkblue');
+
+    }
+
+    desenhaQuadrado(325, 10, 75, 75, 'transparent');
+        
+
+
+
+</script>
+
