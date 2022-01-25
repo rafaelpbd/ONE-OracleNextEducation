@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(/docs/img/decipher_bg.jpg);
+    background-image: url(./docs/img/decipher_bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
