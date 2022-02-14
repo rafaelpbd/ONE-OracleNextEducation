@@ -1,0 +1,56 @@
+<!--
+    Através de gráficos podemos expressar visualmente dados ou valores numéricos, e assim facilitar a nossa compreensão. Gráficos ajudam a entender o relacionamento entre valores e facilitam tirar conclusões.
+    Existem vários gráficos, entre os mais famosos está o gráfico de barras, que é o objeto de estudo desse exercício. Procuramos em alguns relatórios da Alura quais navegadores os nossos alunos utilizavam em 2015 e 2016. Separamos os dados:
+
+    Em 2015: 50% Chrome, 25% Firefox, 20% Safari, 5% Outros (Opera, IE, etc).
+    Em 2016: 65% Chrome, 20% Firefox, 13% Safari, 2% Outros (Opera, IE, Edge, etc).
+
+    Implemente a função desenhaBarra e chame-a para desenhar duas barras!
+
+-->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    tela = document.querySelector('canvas')
+    pincel = tela.getContext('2d')
+    var serie2015 = [50, 25, 20, 5];
+    var serie2016 = [65, 20, 13, 2];
+    var cores = ['blue', 'green', 'yellow', 'red'];
+
+    function desenhaBarra(x, y, serie, color, texto) {
+
+        var height = 0
+        var y_init = 50
+
+            for(contador = 0; contador < serie.length; contador += 1) {
+                
+                height = serie[contador]    
+                pincel.fillStyle = color[contador]
+                pincel.fillRect(x, y_init, 50, height)
+                pincel.strokeStyle = 'black'
+                pincel.strokeRect(x, y_init, 50, height)
+                y_init += height
+
+                pincel.font='15px Georgia';
+                pincel.fillStyle='black';
+                pincel.fillText(texto, x + 4, y - 3);
+            };
+    };
+    
+    function desenhaTexto(x, y, texto) {
+
+        pincel.font='15px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);
+
+    }
+
+    
+
+    desenhaBarra(50, 50, serie2015, cores, '2015');
+    desenhaBarra(150, 50, serie2016, cores, '2016');
+    desenhaTexto(53, 170, 'Azul = Chrome | Verde = Firefox | Amarelo = Safari | Vermelho = Outros')
+
+</script>

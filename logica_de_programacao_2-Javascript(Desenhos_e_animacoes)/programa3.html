@@ -1,0 +1,31 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function criaQuadrado(cor, x, y, width, lenght) {
+        
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, width, lenght);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, width, lenght);
+
+    }
+    
+    function exibeAlerta(evento) {
+
+        var x = evento.pageX
+        var y = evento.pageY
+        
+        alert('cliquei')
+        console.log(evento)
+
+    }
+    
+    
+    tela = document.querySelector('canvas')
+    pincel = tela.getContext('2d')
+
+    criaQuadrado('grey', 0, 0, 600, 400)
+
+    tela.onclick = exibeAlerta
+
+</script>
