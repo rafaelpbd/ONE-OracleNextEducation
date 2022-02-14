@@ -1,0 +1,341 @@
+* {
+    margin: 0%;
+    padding: 0%;
+
+}
+
+body {
+    background-image: url(../img/folha_caderno_600x774.png);
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-position-y: -03%;
+    background-size: 70%;
+    background-blend-mode: lighten; 
+    background-color: lightblue; /* 194E92 */
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+#canvas {
+    position: absolute;
+    left: 0%;
+    background-color: transparent;
+    font-family: 'Gochi Hand', cursive;
+    z-index: -1;
+}
+
+.font {
+    font-family: "Gochi Hand", "cursive";
+    font-size: 20px;
+}
+
+.labelTema {
+    position: absolute;
+    right: 8%;
+    top: 3%;
+    font-size: 30px;
+    
+}
+
+#forca {
+    width: 15%;
+
+}
+
+.forca {
+    width: inherit;
+    position: absolute;
+    top: 27%;
+    left: 16%;
+    z-index: -2;
+}
+
+#boneco {
+    width: 8%;
+    position: absolute;
+    top: 30%;
+    left: 26%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#cabeca {
+    width: 4.6%;
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    z-index: -1;
+    visibility: hidden;
+
+}
+
+#tronco {
+    width: 1.2%;
+    position: absolute;
+    top: 39.6%;
+    left: 29.3%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#bracoDir {
+    width: 3.3%;
+    position: absolute;
+    top: 43.2%;
+    left: 30.4%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#bracoEsq {
+    width: 3.3%;
+    position: absolute;
+    top: 43.1%;
+    left: 26.7%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#pernaEsq {
+    width: 3.3%;
+    position: absolute;
+    top: 53.8%;
+    left: 26.4%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#pernaDir {
+    width: 3.3%;
+    position: absolute;
+    top: 53.8%;
+    left: 29.6%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#chute {
+    position: absolute;
+    right: 8%;
+    top: 40%;
+    width: 35px;
+    height: 35px;
+    font-size: 33px;
+    
+    border: solid 2px black;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .9);
+    text-transform: uppercase;
+    padding-left: 13px;
+    
+}
+
+#button_tentar {
+    position: absolute;
+    right: 7%;
+    top: 47%;
+    width: 80px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Gochi Hand", "cursive";
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+#telaPerdeu {
+    position: absolute;
+    width: 1340px;
+    height: 690px;
+    top: 0%;
+    left: 05px;
+    opacity: 01;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+    visibility: hidden;
+
+}
+
+#dead {
+    position: relative;
+    left: 25%;
+    top: -15%;
+    width: 22em;
+    z-index: 101;
+
+}
+
+#tururu {
+    visibility: hidden;
+    position: absolute;
+}
+
+#reiniciarBotao {
+    z-index: 102;
+    position: relative;
+    bottom: -250px;
+    left: -28%;
+    font: 40px solid black;
+    font-weight: bold;
+    font-family: "Gochi Hand", "cursive";
+}
+
+#reiniciarBotao:hover {
+    transform: scale(1.3);
+
+}
+
+.gameOver {
+    font-family: "Gochi Hand", "cursive";
+    font-size: 80px;
+    position: relative;
+    top: 18%;
+    left: -3%;
+
+}
+
+#telaGanhou {
+    position: absolute;
+    width: 1340px;
+    height: 690px;
+    top: 0%;
+    left: 05px;
+    opacity: 1;
+    background-color: rgb(134, 231, 134);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+    visibility: hidden;
+
+}
+
+#comemorando {
+    position: relative;
+    left: 36%;
+    top: -15%;
+    width: 11em;
+    z-index: 101;
+
+}
+
+#temaVitoria {
+    visibility: hidden;
+    position: absolute;
+}
+
+#reiniciarBotaoGanhou {
+    z-index: 102;
+    position: relative;
+    bottom: -250px;
+    left: -28%;
+    font: 40px solid black;
+    font-weight: bold;
+    font-family: "Gochi Hand", "cursive";
+}
+
+#reiniciarBotaoGanhou:hover {
+    transform: scale(1.3);
+
+}
+
+.fraseGanhou {
+    font-family: "Gochi Hand", "cursive";
+    font-size: 80px;
+    position: relative;
+    top: 18%;
+    left: -3%;
+
+}
+
+#button_tentar:hover {
+
+    transform: scale(1.2);
+}
+
+.chute {
+    position: absolute;
+    right: 13%;
+    top: 40%;
+    font-size: 35px;
+    font-family: "Gochi Hand", "cursive";
+}
+
+#form_tema {
+    position: absolute;
+    background-color: transparent;
+    right: 3.5%;
+    top: 10%;
+    
+}
+.radioDist {
+    visibility: visible;
+    display: none;
+}
+.radioLabel {
+
+    padding-left: 10px;
+}
+
+.radioLabel:hover {
+    
+    transform: scale(1.8);
+    text-transform: uppercase;
+    font-size: 30px;
+
+}
+
+.box_shadow {
+    box-shadow: 10px 5px 10px black;
+}
+
+#footer {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    bottom: 05px;
+    left: 15%;
+    
+}
+
+
+
+.dev_name {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#logos {
+    display: inline;
+    margin-left: 10px;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.img_logos {
+    width: 35px;
+    margin-left: 5px;
+}
+
+.img_logos:hover {
+    transform: scale(1.3);
+}
+

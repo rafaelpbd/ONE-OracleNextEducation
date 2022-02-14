@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+    <link rel="stylesheet" href="./css/style_forca.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Covered+By+Your+Grace&family=Gochi+Hand&family=Overpass+Mono&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <canvas id="canvas" width="1200" height="600"></canvas>
+        <div id="forca">
+            <img class="forca" src="./img/jogo_da_forca_so_a_forca.png" alt="forca">
+        </div>
+        <img id="boneco" class="" src="./img/boneco_inteiro.png" alt="boneco">
+        <img id="cabeca" class="" src="./img/cabeca.png" alt="cabeca">
+        <img id="tronco" class="" src="./img/tronco.png" alt="tronco">
+        <img id="bracoDir" class="" src="./img/braco_direito.png" alt="braco direito">
+        <img id="bracoEsq" class="" src="./img/braco_esquerdo.png" alt="braco esquerdo">
+        <img id="pernaEsq" class="" src="./img/perna_esquerda.png" alt="perna esquerdo">
+        <img id="pernaDir" class="" src="./img/perna_direita.png" alt="perna direita">
+
+
+        <form action="#" id="form_chute" autocomplete="off">
+            <label class="chute" for="chute">Chute:</label>
+            <input id="chute" class="font" type="text" maxlength="1" onclick="selecionar()"> 
+            <button id="button_tentar" form="form_chute" onclick="chutar()">Tentar</button>
+        </form>
+
+        <label for="form_tema" class="font labelTema">Escolha o tema</label>
+        <form action="#" id="form_tema" class="font">
+            
+            <input id="filmes" class="radioDist" type="radio" name="tema" value="filmes"  onclick="escolheTema()"  > <label id="filmesLabel" for="filmes" class="radioLabel ">Filmes</label> 
+            
+            <input id="frutas" class="radioDist" type="radio" name="tema" value="frutas"  onclick="escolheTema()">     <label id="frutasLabel" for="frutas" class="radioLabel">Frutas</label>  
+            
+            <input id="animais" class="radioDist" type="radio" name="tema" value="animais"  onclick="escolheTema()">  <label id="animaisLabel" for="animais" class="radioLabel">Animais</label>
+            
+            <input id="paises" class="radioDist" type="radio" name="tema" value="paises"  onclick="escolheTema()">  <label id="paisesLabel" for="paises" class="radioLabel">Países</label>
+        </form>
+
+    </main>
+
+    <div id="telaPerdeu" >
+        <img id="dead" src="./img/dead.svg" alt="dead emoji">
+        <p class="gameOver">GAME OVER</p>
+
+        <label id="reiniciarBotao" for="paises">Tentar novamente</label>
+        <audio id="tururu" controls>
+            <source src="./sound/Tururu.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div id="telaGanhou" >
+        <img id="comemorando" src="./img/boneco_comemorando.png" alt="boneco comemorando">
+        <p class="fraseGanhou">  <br> Parabéns, você ganhou!!!</p>
+
+        <label id="reiniciarBotaoGanhou" for="paises">Jogar novamente</label>
+        <audio id="temaVitoria" controls>
+            <source src="./sound/temaVitoria.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div id="footer">
+        <p class="dev_name font">Por Rafael Marques</p>
+        <footer id="logos">
+            <a href="https://www.linkedin.com/in/rafael-marques-da-silva/" target="blank_"> <img class="img_logos" src="./img/logo_linkedin_64px.png" alt="logo e link para o linkedin do desenvolvedor"> </a>
+            <a href="https://github.com/rafaelpbd" target="blank_"> <img class="img_logos" src="./img/logo_github_50px.png" alt="logo e link para o github do desenvolvedor"> </a>
+        </footer>
+    <script src="./js/jogoForca.js"></script>    
+</body>
+</html>
