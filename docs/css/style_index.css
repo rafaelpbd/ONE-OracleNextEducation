@@ -72,6 +72,11 @@ ul {
     background-color: transparent;
 }
 
+#alura {
+    text-decoration: none;
+    color: black;
+}
+
 img {
     width: 35px;
     margin-left: 5px;
