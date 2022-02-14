@@ -10,13 +10,17 @@
 
     }
     
-    function exibeAlerta(evento) {
+    function desenhaCirculo(evento) {
 
-        var x = evento.pageX
-        var y = evento.pageY
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, 10, 0, 2 * 3.14)
+        pincel.fill();
         
-        alert('cliquei')
-        console.log(evento)
+        console.log(x + ', ' + y)
 
     }
     
@@ -26,6 +30,6 @@
 
     criaQuadrado('grey', 0, 0, 600, 400)
 
-    tela.onclick = exibeAlerta
+    tela.onclick = desenhaCirculo
 
 </script>
