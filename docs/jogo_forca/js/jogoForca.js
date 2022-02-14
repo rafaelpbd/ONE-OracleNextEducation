@@ -10,6 +10,13 @@ function criaQuadrado(cor, x, y, width, lenght) {
 
 }
 
+function caracteresEspeciais(caractere) {
+    
+    const caracteresEsp = /[`!@#$%^&*()1234567890ÁÃẼĨÕŨÂÊÎÔÛÁÉÍÓÚáãẽĩõũâêîôûáéíóú_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    return caracteresEsp.test(caractere);
+
+}
+
 function sorteiaItem() {
     
     // limpar a area desenhada sempre que o tema for escolhido
@@ -173,6 +180,14 @@ function chutar() {
 
         /*  */
 
+    if(caracteresEspeciais(chute) == true) {
+
+        alert("Por favor, não utilize caracteres especiais, acentos ou numeros");
+        chute.value = ""
+
+
+    } else {
+
     for(let i = 0; i < itemSorteado.length; i++) {
         
         // for(n = 0; n < itemSorteado.length; n++) {
@@ -304,7 +319,7 @@ function chutar() {
 
     console.log(itemSorteado)
     console.log(listaAcertos)
-
+}
 }
 
 
