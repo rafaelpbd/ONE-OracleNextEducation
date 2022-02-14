@@ -184,6 +184,7 @@ function chutar() {
 
         alert("Por favor, não utilize caracteres especiais, acentos ou numeros");
         chute.value = ""
+        selecionar()
 
 
     } else {
